@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import {ActivityIndicator, Image, Text, TouchableOpacity, View} from "react-native";
 import {connect} from 'react-redux';
 import styles from './User.Style'
-import {getUserRequest} from "../actions";
+import {getUserRequest} from "./User.Action";
 
 class UserScreen extends Component {
     static navigationOptions = {

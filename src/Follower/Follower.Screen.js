@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import {ActivityIndicator, FlatList, Image, Text, TouchableOpacity, View} from "react-native";
 import {connect} from 'react-redux';
 import styles from './Follower.Style'
-import {getFollowerRequest} from "../actions";
+import {getFollowerRequest} from "./Follower.Action";
 
 class FollowerScreen extends Component {
     static navigationOptions = {
