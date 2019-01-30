@@ -2,20 +2,22 @@ import {call, put, takeLatest} from 'redux-saga/effects';
 import {getFollower} from "../api";
 import {GET_FOLLOWER_REQUEST, getFollowerFail, getFollowerSuccess} from "./Follower.Action";
 import {sendNetworkFail} from "../actions";
+import {isNil} from "ramda";
 
 export function* watchGetFollower() {
     yield takeLatest(GET_FOLLOWER_REQUEST, handleGetFollower)
 }
 
 function* handleGetFollower(action) {
-    try {
-        const res = yield call(getFollower, action.payload)
-        if (res.data) {
-            yield put(getFollowerSuccess(res.data))
+    const response = yield call(getFollower, action.payload)
+    if (response.ok) {
+        yield put(getFollowerSuccess(response.data))
+    } else {
+        if (!isNil(response.problem) && (response.problem === 'NETWORK_ERROR' || response.problem === 'TIMEOUT_ERROR')) {
+            yield put(sendNetworkFail(response.problem))
+            yield put(getFollowerFail(response.problem))
         } else {
-            yield put(getFollowerFail(res.err))
+            yield put(sendNetworkFail(response.problem))
         }
-    } catch (err) {
-        yield(sendNetworkFail(err.toString()))
     }
 }

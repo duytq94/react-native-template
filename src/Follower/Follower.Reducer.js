@@ -20,7 +20,7 @@ export const getFollower = (state = initialState, action) => {
             return {
                 fetching: false,
                 data: null,
-                err: action.payload.message
+                err: action.payload.err
             }
         default:
             return state

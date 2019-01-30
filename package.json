@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "apisauce": "^1.0.2",
+    "ramda": "^0.26.1",
     "react": "16.6.3",
     "react-native": "0.58.3",
     "react-native-gesture-handler": "^1.0.15",
