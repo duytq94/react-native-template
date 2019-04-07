@@ -2,8 +2,9 @@ import React, {Component} from 'react'
 import AppContainer from "../AppNavigation";
 import {connect} from 'react-redux';
 import styles from './RootContainer.Style'
-import {Text, TouchableOpacity, View} from 'react-native'
+import {View} from 'react-native'
 import {clearNetworkFail} from "../actions";
+import Toast from "react-native-simple-toast";
 
 class RootContainerScreen extends Component {
     constructor(props) {
@@ -15,34 +16,30 @@ class RootContainerScreen extends Component {
 
     componentWillReceiveProps(newProps) {
         if (newProps.sendNetworkFail.err) {
-            this.setState({isShowNetworkErr: true})
-        } else {
-            this.setState({isShowNetworkErr: false})
+            switch (newProps.sendNetworkFail.err) {
+                case 'NETWORK_ERROR':
+                    Toast.show('No internet connection')
+                    break
+                case 'TIMEOUT_ERROR':
+                    Toast.show('Timeout')
+                    break
+                case 'CONNECTION_ERROR':
+                    Toast.show('Server DNS not found')
+                    break
+                default:
+                    Toast.show(newProps.sendNetworkFail.err)
+                    break
+            }
+            this.props.onCallApi(clearNetworkFail())
         }
-    }
-
-    onBtnNetworkErrPress = () => {
-        this.props.onCallApi(clearNetworkFail())
     }
 
     render() {
         return (
             <View style={styles.container}>
                 <AppContainer/>
-
-                {this.state.isShowNetworkErr ?
-                    <View style={styles.viewNetworkErr}>
-                        <TouchableOpacity
-                            style={styles.btnRetry}
-                            onPress={this.onBtnNetworkErrPress}>
-                            <Text style={styles.textRetry}>NETWORK ERROR</Text>
-                        </TouchableOpacity>
-                    </View>
-                    : null
-                }
-
             </View>
-        );
+        )
     }
 }
 

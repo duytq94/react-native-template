@@ -12,6 +12,7 @@
     "react": "16.6.3",
     "react-native": "0.58.3",
     "react-native-gesture-handler": "^1.0.15",
+    "react-native-simple-toast": "0.0.8",
     "react-navigation": "^3.0.9",
     "react-redux": "^6.0.0",
     "redux": "^4.0.1",
