@@ -10,8 +10,4 @@
 * Run `react-native run-ios` to run on iOS devices
 
 ## Screenshots
-![default](screenshots/1.jpg)
-
-![default](screenshots/2.jpg)
-
-![default](screenshots/3.jpg)
+![default](screenshots/1.jpg) ![default](screenshots/2.jpg) ![default](screenshots/3.jpg)
