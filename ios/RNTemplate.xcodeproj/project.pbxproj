@@ -59,6 +59,12 @@
 		798CAA40F344415794BC52CB /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 703037236B2B47D6817FE6DE /* Octicons.ttf */; };
 		9C4503F3A2B244D980BF1B18 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F2474AB66124BBA9B219A7B /* SimpleLineIcons.ttf */; };
 		F61C57B995EB40F6B5E31540 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 45A70F7E073444F681A3322C /* Zocial.ttf */; };
+		6DB357E52AA04476829CA505 /* iCielVAGRoundedNext-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D46BA083F8434D69AD98A411 /* iCielVAGRoundedNext-Bold.otf */; };
+		EA4CED51BF384026B169F740 /* iCielVAGRoundedNext-DemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6A36E05A5488465EB4904694 /* iCielVAGRoundedNext-DemiBold.otf */; };
+		55E7291482724374A90501FC /* iCielVAGRoundedNext-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = A99A456381A6470F8F4D8BB6 /* iCielVAGRoundedNext-Light.otf */; };
+		45F5114335B84BF4A050057E /* iCielVAGRoundedNext-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 532C3BD20C3247298BADC248 /* iCielVAGRoundedNext-LightItalic.otf */; };
+		078B8C458E9846E59D73EE59 /* iCielVAGRoundedNext-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 72F0F3C673CB4DB7A6791371 /* iCielVAGRoundedNext-Medium.otf */; };
+		24CFAF2C87D144D280DDF428 /* iCielVAGRoundedNext-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 979E6494221A4EF8B1D1E337 /* iCielVAGRoundedNext-Regular.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -408,6 +414,12 @@
 		703037236B2B47D6817FE6DE /* Octicons.ttf */ = {isa = PBXFileReference; name = "Octicons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		1F2474AB66124BBA9B219A7B /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; name = "SimpleLineIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		45A70F7E073444F681A3322C /* Zocial.ttf */ = {isa = PBXFileReference; name = "Zocial.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D46BA083F8434D69AD98A411 /* iCielVAGRoundedNext-Bold.otf */ = {isa = PBXFileReference; name = "iCielVAGRoundedNext-Bold.otf"; path = "../assets/fonts/iCielVAGRoundedNext-Bold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6A36E05A5488465EB4904694 /* iCielVAGRoundedNext-DemiBold.otf */ = {isa = PBXFileReference; name = "iCielVAGRoundedNext-DemiBold.otf"; path = "../assets/fonts/iCielVAGRoundedNext-DemiBold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A99A456381A6470F8F4D8BB6 /* iCielVAGRoundedNext-Light.otf */ = {isa = PBXFileReference; name = "iCielVAGRoundedNext-Light.otf"; path = "../assets/fonts/iCielVAGRoundedNext-Light.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		532C3BD20C3247298BADC248 /* iCielVAGRoundedNext-LightItalic.otf */ = {isa = PBXFileReference; name = "iCielVAGRoundedNext-LightItalic.otf"; path = "../assets/fonts/iCielVAGRoundedNext-LightItalic.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		72F0F3C673CB4DB7A6791371 /* iCielVAGRoundedNext-Medium.otf */ = {isa = PBXFileReference; name = "iCielVAGRoundedNext-Medium.otf"; path = "../assets/fonts/iCielVAGRoundedNext-Medium.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		979E6494221A4EF8B1D1E337 /* iCielVAGRoundedNext-Regular.otf */ = {isa = PBXFileReference; name = "iCielVAGRoundedNext-Regular.otf"; path = "../assets/fonts/iCielVAGRoundedNext-Regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -741,6 +753,12 @@
 				703037236B2B47D6817FE6DE /* Octicons.ttf */,
 				1F2474AB66124BBA9B219A7B /* SimpleLineIcons.ttf */,
 				45A70F7E073444F681A3322C /* Zocial.ttf */,
+				D46BA083F8434D69AD98A411 /* iCielVAGRoundedNext-Bold.otf */,
+				6A36E05A5488465EB4904694 /* iCielVAGRoundedNext-DemiBold.otf */,
+				A99A456381A6470F8F4D8BB6 /* iCielVAGRoundedNext-Light.otf */,
+				532C3BD20C3247298BADC248 /* iCielVAGRoundedNext-LightItalic.otf */,
+				72F0F3C673CB4DB7A6791371 /* iCielVAGRoundedNext-Medium.otf */,
+				979E6494221A4EF8B1D1E337 /* iCielVAGRoundedNext-Regular.otf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1232,6 +1250,12 @@
 				798CAA40F344415794BC52CB /* Octicons.ttf in Resources */,
 				9C4503F3A2B244D980BF1B18 /* SimpleLineIcons.ttf in Resources */,
 				F61C57B995EB40F6B5E31540 /* Zocial.ttf in Resources */,
+				6DB357E52AA04476829CA505 /* iCielVAGRoundedNext-Bold.otf in Resources */,
+				EA4CED51BF384026B169F740 /* iCielVAGRoundedNext-DemiBold.otf in Resources */,
+				55E7291482724374A90501FC /* iCielVAGRoundedNext-Light.otf in Resources */,
+				45F5114335B84BF4A050057E /* iCielVAGRoundedNext-LightItalic.otf in Resources */,
+				078B8C458E9846E59D73EE59 /* iCielVAGRoundedNext-Medium.otf in Resources */,
+				24CFAF2C87D144D280DDF428 /* iCielVAGRoundedNext-Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

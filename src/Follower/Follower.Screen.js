@@ -7,7 +7,7 @@ import NoDataView from "../Components/NoDataView";
 
 class FollowerScreen extends Component {
     static navigationOptions = {
-        headerTitle: <Text style={styles.titleHeader}>FOLLOWERS</Text>
+        headerTitle: <Text style={styles.titleHeader}>Followers</Text>
     }
 
     constructor(props) {
@@ -43,8 +43,7 @@ class FollowerScreen extends Component {
                     <View style={styles.viewLoading}>
                         <ActivityIndicator/>
                     </View> :
-                    null
-                }
+                    null}
             </View>
         )
     }

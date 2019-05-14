@@ -1,19 +1,19 @@
 import {StyleSheet} from 'react-native'
 import colors from "../colors";
-import {fontSize} from "../const";
+import {fontFamily, fontSize} from "../const";
 
 export default StyleSheet.create({
     container: {
         flex: 1,
     },
     titleHeader: {
-        fontWeight: 'bold',
-        color: 'black',
-        fontSize: 18,
+        fontFamily: fontFamily.demiBold,
+        color: colors.charcoalGrey,
+        fontSize: fontSize.large,
         marginLeft: 50
     },
     btnGetData: {
-        backgroundColor: 'black',
+        backgroundColor: colors.charcoalGrey,
         width: 120,
         height: 40,
         alignItems: 'center',
@@ -23,7 +23,9 @@ export default StyleSheet.create({
         alignSelf: 'center'
     },
     textGetData: {
-        color: 'white'
+        fontFamily: fontFamily.regular,
+        color: colors.white,
+        fontSize: fontSize.medium,
     },
     avatar: {
         width: 50,
@@ -48,6 +50,7 @@ export default StyleSheet.create({
     textData: {
         color: colors.charcoalGrey,
         fontSize: fontSize.medium,
+        fontFamily: fontFamily.regular,
         marginTop: 5
     }
 })

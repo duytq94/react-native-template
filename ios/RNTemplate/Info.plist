@@ -70,6 +70,12 @@
 		<string>Octicons.ttf</string>
 		<string>SimpleLineIcons.ttf</string>
 		<string>Zocial.ttf</string>
+		<string>iCielVAGRoundedNext-Bold.otf</string>
+		<string>iCielVAGRoundedNext-DemiBold.otf</string>
+		<string>iCielVAGRoundedNext-Light.otf</string>
+		<string>iCielVAGRoundedNext-LightItalic.otf</string>
+		<string>iCielVAGRoundedNext-Medium.otf</string>
+		<string>iCielVAGRoundedNext-Regular.otf</string>
 	</array>
 </dict>
 </plist>

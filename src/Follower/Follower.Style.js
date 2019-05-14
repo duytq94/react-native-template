@@ -1,13 +1,15 @@
 import {StyleSheet} from 'react-native'
+import colors from "../colors";
+import {fontFamily, fontSize} from "../const";
 
 export default StyleSheet.create({
     container: {
         flex: 1,
     },
     titleHeader: {
-        fontWeight: 'bold',
-        color: 'black',
-        fontSize: 18,
+        fontFamily: fontFamily.demiBold,
+        color: colors.charcoalGrey,
+        fontSize: fontSize.large,
     },
     btnGetData: {
         backgroundColor: 'black',
@@ -21,7 +23,9 @@ export default StyleSheet.create({
         alignSelf: 'center'
     },
     textGetData: {
-        color: 'white'
+        fontFamily: fontFamily.regular,
+        color: colors.white,
+        fontSize: fontSize.medium,
     },
     viewLoading: {
         position: 'absolute',
@@ -46,6 +50,9 @@ export default StyleSheet.create({
         borderRadius: 15,
     },
     textName: {
-        marginLeft: 10
+        marginLeft: 10,
+        color: colors.charcoalGrey,
+        fontSize: fontSize.medium,
+        fontFamily: fontFamily.regular,
     }
 })
