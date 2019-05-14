@@ -8,3 +8,5 @@
 * Run `npm install` to install packages
 * Run `react-native run-android` to run on Android devices
 * Run `react-native run-ios` to run on iOS devices
+
+## Screenshots

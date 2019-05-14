@@ -38,7 +38,7 @@ export default StyleSheet.create({
         height: 50,
         alignSelf: 'stretch',
         alignItems: 'center',
-        margin: 10
+        margin: 5
     },
     avatar: {
         width: 30,

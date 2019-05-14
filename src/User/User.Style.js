@@ -1,4 +1,6 @@
 import {StyleSheet} from 'react-native'
+import colors from "../colors";
+import {fontSize} from "../const";
 
 export default StyleSheet.create({
     container: {
@@ -42,6 +44,10 @@ export default StyleSheet.create({
     body: {
         flex: 1,
         alignItems: 'center',
-
+    },
+    textData: {
+        color: colors.charcoalGrey,
+        fontSize: fontSize.medium,
+        marginTop: 5
     }
 })
