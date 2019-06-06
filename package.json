@@ -11,7 +11,7 @@
     "lodash": "^4.17.11",
     "ramda": "^0.26.1",
     "react": "16.6.3",
-    "react-native": "0.58.3",
+    "react-native": "^0.59.9",
     "react-native-gesture-handler": "^1.0.15",
     "react-native-simple-toast": "0.0.8",
     "react-native-vector-icons": "^6.4.2",
@@ -26,7 +26,7 @@
     "babel-jest": "24.0.0",
     "babel-plugin-transform-remove-console": "^6.9.4",
     "jest": "24.0.0",
-    "metro-react-native-babel-preset": "0.51.1",
+    "metro-react-native-babel-preset": "^0.54.1",
     "react-test-renderer": "16.6.3"
   },
   "jest": {
