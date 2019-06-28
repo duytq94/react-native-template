@@ -1,9 +1,9 @@
 # React Native Template
 
-## Description:
+## Description
 * Template project with Redux, Saga, ReactNavigation.
 
-## How to run:
+## How to run
 * Clone this project and at root project:
 * Run `npm install` to install packages
 * Run `react-native run-android` to run on Android devices
