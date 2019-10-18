@@ -10,8 +10,8 @@
     "apisauce": "^1.0.2",
     "lodash": "^4.17.11",
     "ramda": "^0.26.1",
-    "react": "^16.9.0",
-    "react-native": "^0.60.5",
+    "react": "16.9.0",
+    "react-native": "0.61.2",
     "react-native-gesture-handler": "^1.4.1",
     "react-native-simple-toast": "^0.1.1",
     "react-native-vector-icons": "^6.6.0",
@@ -31,10 +31,5 @@
   },
   "jest": {
     "preset": "react-native"
-  },
-  "rnpm": {
-    "assets": [
-      "./assets/fonts/"
-    ]
   }
 }
