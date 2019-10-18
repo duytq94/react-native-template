@@ -17,10 +17,8 @@ class UserScreen extends Component {
         }
     }
 
-    componentWillReceiveProps(newProps) {
-        this.setState({
-            getUser: newProps.getUser
-        })
+    static getDerivedStateFromProps(nextProps, prevState) {
+        return {getUser: nextProps.getUser}
     }
 
     getUserProfile = () => {

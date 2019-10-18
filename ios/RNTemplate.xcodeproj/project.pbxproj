@@ -11,12 +11,6 @@
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		CC35FD4D235962F3008264C5 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E60EC71C38F748E49C9B2058 /* EvilIcons.ttf */; };
-		CC35FD4E235962F3008264C5 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E818154218F54A5F851BD5C1 /* Ionicons.ttf */; };
-		CC35FD4F235962F3008264C5 /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F65E3D66D96483998279C0C /* MaterialCommunityIcons.ttf */; };
-		CC35FD50235962F3008264C5 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A00981AC47AB4CBD9AA27C42 /* MaterialIcons.ttf */; };
-		CC35FD51235962F3008264C5 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 703037236B2B47D6817FE6DE /* Octicons.ttf */; };
-		CC35FD52235962F3008264C5 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F2474AB66124BBA9B219A7B /* SimpleLineIcons.ttf */; };
 		CC35FD53235962F3008264C5 /* iCielVAGRoundedNext-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D46BA083F8434D69AD98A411 /* iCielVAGRoundedNext-Bold.otf */; };
 		CC35FD54235962F3008264C5 /* iCielVAGRoundedNext-DemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6A36E05A5488465EB4904694 /* iCielVAGRoundedNext-DemiBold.otf */; };
 		CC35FD55235962F3008264C5 /* iCielVAGRoundedNext-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = A99A456381A6470F8F4D8BB6 /* iCielVAGRoundedNext-Light.otf */; };
@@ -666,6 +660,11 @@
 			attributes = {
 				LastUpgradeCheck = 940;
 				ORGANIZATIONNAME = Facebook;
+				TargetAttributes = {
+					13B07F861A680F5B00A75B9A = {
+						ProvisioningStyle = Manual;
+					};
+				};
 			};
 			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "RNTemplate" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1018,12 +1017,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC35FD4D235962F3008264C5 /* EvilIcons.ttf in Resources */,
-				CC35FD4E235962F3008264C5 /* Ionicons.ttf in Resources */,
-				CC35FD4F235962F3008264C5 /* MaterialCommunityIcons.ttf in Resources */,
-				CC35FD50235962F3008264C5 /* MaterialIcons.ttf in Resources */,
-				CC35FD51235962F3008264C5 /* Octicons.ttf in Resources */,
-				CC35FD52235962F3008264C5 /* SimpleLineIcons.ttf in Resources */,
 				CC35FD53235962F3008264C5 /* iCielVAGRoundedNext-Bold.otf in Resources */,
 				CC35FD54235962F3008264C5 /* iCielVAGRoundedNext-DemiBold.otf in Resources */,
 				CC35FD55235962F3008264C5 /* iCielVAGRoundedNext-Light.otf in Resources */,
@@ -1150,8 +1143,10 @@
 			baseConfigurationReference = 049BD1A71DAF050D96B9F7B6 /* Pods-RNTemplate.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
+				DEVELOPMENT_TEAM = "";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)..\node_modules\neact-native-gesture-handlerios/**",
@@ -1166,6 +1161,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rntemplate;
 				PRODUCT_NAME = RNTemplate;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -1175,7 +1171,9 @@
 			baseConfigurationReference = 44CE764062530DEE979A3274 /* Pods-RNTemplate.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)..\node_modules\neact-native-gesture-handlerios/**",
@@ -1190,6 +1188,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rntemplate;
 				PRODUCT_NAME = RNTemplate;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;

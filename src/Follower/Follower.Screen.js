@@ -17,10 +17,8 @@ class FollowerScreen extends Component {
         }
     }
 
-    componentWillReceiveProps(newProps) {
-        this.setState({
-            getFollower: newProps.getFollower
-        })
+    static getDerivedStateFromProps(nextProps, prevState) {
+        return {getFollower: nextProps.getFollower}
     }
 
     getFollower = () => {

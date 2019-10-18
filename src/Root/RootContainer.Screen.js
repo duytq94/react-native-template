@@ -14,9 +14,9 @@ class RootContainerScreen extends Component {
         }
     }
 
-    componentWillReceiveProps(newProps) {
-        if (newProps.sendNetworkFail.err) {
-            switch (newProps.sendNetworkFail.err) {
+    static getDerivedStateFromProps(nextProps, prevState) {
+        if (nextProps.sendNetworkFail.err) {
+            switch (nextProps.sendNetworkFail.err) {
                 case 'NETWORK_ERROR':
                     Toast.show('No network connection, please try again')
                     break
@@ -27,11 +27,12 @@ class RootContainerScreen extends Component {
                     Toast.show('DNS server not found, please try again')
                     break
                 default:
-                    Toast.show(newProps.sendNetworkFail.err)
+                    Toast.show(nextProps.sendNetworkFail.err)
                     break
             }
-            this.props.onCallApi(clearNetworkFail())
+            nextProps.onCallApi(clearNetworkFail())
         }
+        return null
     }
 
     render() {

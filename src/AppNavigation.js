@@ -1,6 +1,7 @@
-import {createAppContainer, createStackNavigator} from "react-navigation";
+import {createAppContainer} from "react-navigation";
 import UserScreen from './User/User.Screen'
 import FollowerScreen from './Follower/Follower.Screen'
+import {createStackNavigator} from 'react-navigation-stack';
 
 const AppNavigator = createStackNavigator(
     {
