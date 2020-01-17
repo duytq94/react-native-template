@@ -4,7 +4,7 @@ import com.android.build.OutputFile
 
 project.ext.react = [
         entryFile   : "index.js",
-        enableHermes: false,
+        enableHermes: false,  // clean and rebuild if changing
 ]
 
 apply from: "../../node_modules/react-native/react.gradle"
@@ -12,6 +12,10 @@ apply from: "../../node_modules/react-native/react.gradle"
 def enableSeparateBuildPerCPUArchitecture = false
 
 def enableProguardInReleaseBuilds = false
+
+def jscFlavor = 'org.webkit:android-jsc:+'
+
+def enableHermes = project.ext.react.get("enableHermes", false);
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
@@ -51,19 +55,12 @@ android {
     }
 }
 
-def jscFlavor = 'org.webkit:android-jsc:+'
-
-def enableHermes = project.ext.react.get("enableHermes", false);
-
 dependencies {
-    implementation project(':react-native-vector-icons')
-    implementation project(':react-native-gesture-handler')
     implementation fileTree(dir: "libs", include: ["*.jar"])
-    implementation 'androidx.appcompat:appcompat:1.0.0'
     implementation "com.facebook.react:react-native:+"  // From node_modules
 
     if (enableHermes) {
-        def hermesPath = "../../node_modules/hermesvm/android/";
+        def hermesPath = "../../node_modules/hermes-engine/android/";
         debugImplementation files(hermesPath + "hermes-debug.aar")
         releaseImplementation files(hermesPath + "hermes-release.aar")
     } else {
@@ -75,3 +72,5 @@ task copyDownloadableDepsToLibs(type: Copy) {
     from configurations.compile
     into 'libs'
 }
+
+apply from: file("../../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesAppBuildGradle(project)
