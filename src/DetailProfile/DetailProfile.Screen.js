@@ -34,7 +34,7 @@ class DetailProfileScreen extends Component {
                 </TouchableOpacity>
                 <View style={styles.viewWrapTitleToolbar}>
                     <Text style={styles.titleToolbar}>
-                        Detail follower
+                        Detail profile
                     </Text>
                 </View>
                 <View style={styles.viewWrapIcRight}/>

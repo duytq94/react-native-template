@@ -57,10 +57,12 @@ class RootContainerScreen extends Component {
                         <Stack.Screen
                             name="DetailProfileScreen"
                             component={DetailProfileScreen}
+                            options={{gestureEnabled: true, gestureDirection: 'horizontal'}}
                         />
                         <Stack.Screen
                             name="DetailFollowerScreen"
                             component={DetailFollowerScreen}
+                            options={{gestureEnabled: true, gestureDirection: 'horizontal'}}
                         />
                     </Stack.Navigator>
                 </NavigationContainer>
