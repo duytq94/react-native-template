@@ -1,25 +1,23 @@
 import {StyleSheet} from 'react-native'
-import colors from "../colors";
-import {fontFamily, fontSize} from "../const";
+import {fontFamily, fontSize} from "../const"
+import ApplicationStyle from "../Themes/Application.Style"
+import colors from "../Themes/Colors"
 
 export default StyleSheet.create({
-    container: {
-        flex: 1,
-    },
+    ...ApplicationStyle,
     titleHeader: {
         fontFamily: fontFamily.demiBold,
         color: colors.charcoalGrey,
         fontSize: fontSize.large,
     },
     btnGetData: {
-        backgroundColor: 'black',
-        width: 150,
+        backgroundColor: colors.charcoalGrey,
+        width: 120,
         height: 40,
         alignItems: 'center',
         justifyContent: 'center',
         marginTop: 20,
-        marginBottom: 10,
-        borderRadius: 4,
+        borderRadius: 5,
         alignSelf: 'center'
     },
     textGetData: {

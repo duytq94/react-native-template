@@ -1,9 +1,12 @@
 import React, {Component} from 'react'
-import {ActivityIndicator, Image, SafeAreaView, Text, TouchableOpacity, View} from "react-native"
+import {ActivityIndicator, Image, StatusBar, Text, TouchableOpacity, View} from "react-native"
 import {connect} from 'react-redux'
 import styles from './Profile.Style'
 import {getProfileRequest} from "./Profile.Action"
 import NoDataView from "../Components/NoDataView"
+import colors from "../Themes/Colors"
+import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons"
+import {barStyle} from "../const"
 
 class ProfileScreen extends Component {
 
@@ -26,21 +29,27 @@ class ProfileScreen extends Component {
         this.props.navigation.navigate('DetailProfileScreen')
     }
 
+    onMenuPress = () => {
+        this.props.navigation.openDrawer()
+    }
+
     render() {
         return (
-            <SafeAreaView style={styles.container}>
+            <View style={styles.mainContainer}>
+                {this.renderToolbar()}
+
                 <TouchableOpacity
                     style={styles.btnGetData}
                     onPress={this.getUserProfile}
                 >
-                    <Text style={styles.textGetData}>GET PROFILE</Text>
+                    <Text style={styles.textGetData}>Get profile</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity
                     style={styles.btnGetData}
                     onPress={this.goDetail}
                 >
-                    <Text style={styles.textGetData}>GO DETAIL</Text>
+                    <Text style={styles.textGetData}>Go detail</Text>
                 </TouchableOpacity>
 
                 {this.renderDataView()}
@@ -51,7 +60,27 @@ class ProfileScreen extends Component {
                     </View> :
                     null
                 }
-            </SafeAreaView>
+            </View>
+        )
+    }
+
+    renderToolbar = () => {
+        return (
+            <View style={styles.toolbar}>
+                <StatusBar hidden={false} backgroundColor={colors.primary} barStyle={barStyle.lightContent}/>
+                <TouchableOpacity
+                    style={styles.viewWrapIcLeft}
+                    onPress={this.onMenuPress}
+                >
+                    <MaterialCommunityIcons name={'menu'} size={30} color={colors.white}/>
+                </TouchableOpacity>
+                <View style={styles.viewWrapTitleToolbar}>
+                    <Text style={styles.titleToolbar}>
+                        Profile
+                    </Text>
+                </View>
+                <View style={styles.viewWrapIcRight}/>
+            </View>
         )
     }
 

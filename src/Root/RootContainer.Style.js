@@ -1,9 +1,8 @@
 import {StyleSheet} from 'react-native'
+import ApplicationStyle from "../Themes/Application.Style"
 
 export default StyleSheet.create({
-    container: {
-        flex: 1,
-    },
+    ...ApplicationStyle,
     viewNetworkErr: {
         position: 'absolute',
         left: 0,

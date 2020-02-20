@@ -1,9 +1,12 @@
 import React, {Component} from 'react'
-import {ActivityIndicator, FlatList, Image, SafeAreaView, Text, TouchableOpacity, View} from "react-native"
+import {ActivityIndicator, FlatList, Image, StatusBar, Text, TouchableOpacity, View} from "react-native"
 import {connect} from 'react-redux'
 import styles from './Follower.Style'
 import {getFollowerRequest} from "./Follower.Action"
 import NoDataView from "../Components/NoDataView"
+import colors from "../Themes/Colors"
+import {barStyle} from "../const"
+import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons"
 
 class FollowerScreen extends Component {
 
@@ -26,15 +29,20 @@ class FollowerScreen extends Component {
         this.props.navigation.navigate('DetailFollowerScreen')
     }
 
+    onMenuPress = () => {
+        this.props.navigation.openDrawer()
+    }
 
     render() {
         return (
-            <SafeAreaView style={styles.container}>
+            <View style={styles.mainContainer}>
+                {this.renderToolbar()}
+
                 <TouchableOpacity
                     style={styles.btnGetData}
                     onPress={this.getFollower}
                 >
-                    <Text style={styles.textGetData}>GET FOLLOWER</Text>
+                    <Text style={styles.textGetData}>Get follower</Text>
                 </TouchableOpacity>
 
 
@@ -42,7 +50,7 @@ class FollowerScreen extends Component {
                     style={styles.btnGetData}
                     onPress={this.goDetail}
                 >
-                    <Text style={styles.textGetData}>GO DETAIL</Text>
+                    <Text style={styles.textGetData}>Go detail</Text>
                 </TouchableOpacity>
 
                 {this.renderDataView()}
@@ -52,7 +60,27 @@ class FollowerScreen extends Component {
                         <ActivityIndicator/>
                     </View> :
                     null}
-            </SafeAreaView>
+            </View>
+        )
+    }
+
+    renderToolbar = () => {
+        return (
+            <View style={styles.toolbar}>
+                <StatusBar hidden={false} backgroundColor={colors.primary} barStyle={barStyle.lightContent}/>
+                <TouchableOpacity
+                    style={styles.viewWrapIcLeft}
+                    onPress={this.onMenuPress}
+                >
+                    <MaterialCommunityIcons name={'menu'} size={30} color={colors.white}/>
+                </TouchableOpacity>
+                <View style={styles.viewWrapTitleToolbar}>
+                    <Text style={styles.titleToolbar}>
+                        Follower
+                    </Text>
+                </View>
+                <View style={styles.viewWrapIcRight}/>
+            </View>
         )
     }
 

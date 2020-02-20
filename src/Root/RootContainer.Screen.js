@@ -6,9 +6,9 @@ import {clearNetworkFail} from "../actions"
 import Toast from "react-native-simple-toast"
 import {NavigationContainer} from '@react-navigation/native'
 import {createStackNavigator} from '@react-navigation/stack'
-import {DrawerNavigator} from "../DrawerNavigator"
 import DetailProfileScreen from "../DetailProfile/DetailProfile.Screen"
 import DetailFollowerScreen from "../DetailFollower/DetailFollower.Screen"
+import {DrawerNavigatorScreen} from "../DrawerNavigator/DrawerNavigator.Screen"
 
 const Stack = createStackNavigator()
 
@@ -44,23 +44,23 @@ class RootContainerScreen extends Component {
 
     render() {
         return (
-            <View style={styles.container}>
+            <View style={styles.mainContainer}>
                 <NavigationContainer>
-                    <Stack.Navigator initialRouteName="ProfileScreen">
+                    <Stack.Navigator
+                        initialRouteName="Drawer"
+                        headerMode={'none'}
+                    >
                         <Stack.Screen
                             name="Drawer"
-                            component={DrawerNavigator}
-                            options={{title: 'Drawer'}}
+                            component={DrawerNavigatorScreen}
                         />
                         <Stack.Screen
                             name="DetailProfileScreen"
                             component={DetailProfileScreen}
-                            options={{title: 'Detail profile'}}
                         />
                         <Stack.Screen
                             name="DetailFollowerScreen"
                             component={DetailFollowerScreen}
-                            options={{title: 'Detail follower'}}
                         />
                     </Stack.Navigator>
                 </NavigationContainer>

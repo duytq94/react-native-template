@@ -1,11 +1,10 @@
 import {StyleSheet} from 'react-native'
-import colors from "../colors";
-import {fontFamily, fontSize} from "../const";
+import {fontFamily, fontSize} from "../const"
+import ApplicationStyle from "../Themes/Application.Style"
+import colors from "../Themes/Colors"
 
 export default StyleSheet.create({
-    container: {
-        flex: 1,
-    },
+    ...ApplicationStyle,
     titleHeader: {
         fontFamily: fontFamily.demiBold,
         color: colors.charcoalGrey,
@@ -19,7 +18,7 @@ export default StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         marginTop: 20,
-        borderRadius: 4,
+        borderRadius: 5,
         alignSelf: 'center'
     },
     textGetData: {

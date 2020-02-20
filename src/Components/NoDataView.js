@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import {Text, TouchableOpacity, View} from 'react-native'
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import {fontFamily, fontSize} from "../const";
-import colors from "../colors";
+import colors from "../Themes/Colors"
 
 export default class NoDataView extends Component {
 

@@ -1,15 +1,16 @@
 import {StyleSheet} from 'react-native'
-import ApplicationStyle from "../Themes/Application.Style"
 import {fontFamily, fontSize} from "../const"
+import ApplicationStyle from "../Themes/Application.Style"
 import colors from "../Themes/Colors"
 
 export default StyleSheet.create({
     ...ApplicationStyle,
-    textContent: {
-        fontFamily: fontFamily.regular,
-        color: colors.charcoalGrey,
+
+    textItemMenu: {
         fontSize: fontSize.medium,
-        marginTop: 10,
-        alignSelf: 'center'
-    }
+        fontFamily: fontFamily.regular,
+        color: colors.primary,
+        marginLeft: 12,
+    },
+
 })
