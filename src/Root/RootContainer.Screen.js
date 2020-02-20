@@ -4,10 +4,11 @@ import styles from './RootContainer.Style'
 import {View} from 'react-native'
 import {clearNetworkFail} from "../actions"
 import Toast from "react-native-simple-toast"
-import UserScreen from '../User/User.Screen'
-import FollowerScreen from '../Follower/Follower.Screen'
 import {NavigationContainer} from '@react-navigation/native'
 import {createStackNavigator} from '@react-navigation/stack'
+import {DrawerNavigator} from "../DrawerNavigator"
+import DetailProfileScreen from "../DetailProfile/DetailProfile.Screen"
+import DetailFollowerScreen from "../DetailFollower/DetailFollower.Screen"
 
 const Stack = createStackNavigator()
 
@@ -45,16 +46,21 @@ class RootContainerScreen extends Component {
         return (
             <View style={styles.container}>
                 <NavigationContainer>
-                    <Stack.Navigator initialRouteName="UserScreen">
+                    <Stack.Navigator initialRouteName="ProfileScreen">
                         <Stack.Screen
-                            name="UserScreen"
-                            component={UserScreen}
-                            options={{title: 'User'}}
+                            name="Drawer"
+                            component={DrawerNavigator}
+                            options={{title: 'Drawer'}}
                         />
                         <Stack.Screen
-                            name="FollowerScreen"
-                            component={FollowerScreen}
-                            options={{title: 'Follower'}}
+                            name="DetailProfileScreen"
+                            component={DetailProfileScreen}
+                            options={{title: 'Detail profile'}}
+                        />
+                        <Stack.Screen
+                            name="DetailFollowerScreen"
+                            component={DetailFollowerScreen}
+                            options={{title: 'Detail follower'}}
                         />
                     </Stack.Navigator>
                 </NavigationContainer>

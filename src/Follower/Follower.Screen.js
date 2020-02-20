@@ -1,14 +1,11 @@
 import React, {Component} from 'react'
-import {ActivityIndicator, FlatList, Image, Text, TouchableOpacity, View} from "react-native";
-import {connect} from 'react-redux';
+import {ActivityIndicator, FlatList, Image, SafeAreaView, Text, TouchableOpacity, View} from "react-native"
+import {connect} from 'react-redux'
 import styles from './Follower.Style'
-import {getFollowerRequest} from "./Follower.Action";
-import NoDataView from "../Components/NoDataView";
+import {getFollowerRequest} from "./Follower.Action"
+import NoDataView from "../Components/NoDataView"
 
 class FollowerScreen extends Component {
-    static navigationOptions = {
-        headerTitle: <Text style={styles.titleHeader}>Followers</Text>
-    }
 
     constructor(props) {
         super(props)
@@ -25,14 +22,27 @@ class FollowerScreen extends Component {
         this.props.onCallApi(getFollowerRequest('duytq94'))
     }
 
+    goDetail = () => {
+        this.props.navigation.navigate('DetailFollowerScreen')
+    }
+
+
     render() {
         return (
-            <View style={styles.container}>
+            <SafeAreaView style={styles.container}>
                 <TouchableOpacity
                     style={styles.btnGetData}
                     onPress={this.getFollower}
                 >
                     <Text style={styles.textGetData}>GET FOLLOWER</Text>
+                </TouchableOpacity>
+
+
+                <TouchableOpacity
+                    style={styles.btnGetData}
+                    onPress={this.goDetail}
+                >
+                    <Text style={styles.textGetData}>GO DETAIL</Text>
                 </TouchableOpacity>
 
                 {this.renderDataView()}
@@ -42,7 +52,7 @@ class FollowerScreen extends Component {
                         <ActivityIndicator/>
                     </View> :
                     null}
-            </View>
+            </SafeAreaView>
         )
     }
 

@@ -1,5 +1,5 @@
 import {combineReducers} from 'redux'
-import {getUser} from "./User/User.Reducer";
+import {getProfile} from "./Profile/Profile.Reducer";
 import {getFollower} from "./Follower/Follower.Reducer";
 import {CLEAR_NETWORK_FAIL, SEND_NETWORK_FAIL} from "./actions";
 
@@ -20,5 +20,5 @@ const sendNetworkFail = (state = initialState, action) => {
     }
 }
 
-const rootReducer = combineReducers({sendNetworkFail, getUser, getFollower})
+const rootReducer = combineReducers({sendNetworkFail, getProfile, getFollower})
 export default rootReducer

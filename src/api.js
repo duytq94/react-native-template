@@ -6,7 +6,7 @@ export const api = apisauce.create({
     timeout: 15000
 })
 
-export const getUser = (body) => {
+export const getProfile = (body) => {
     return api.get(`users/${body.username}`)
 }
 
