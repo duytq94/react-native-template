@@ -1,12 +1,18 @@
 import React, {Component} from 'react'
-import AppContainer from "../AppNavigation";
-import {connect} from 'react-redux';
+import {connect} from 'react-redux'
 import styles from './RootContainer.Style'
 import {View} from 'react-native'
-import {clearNetworkFail} from "../actions";
-import Toast from "react-native-simple-toast";
+import {clearNetworkFail} from "../actions"
+import Toast from "react-native-simple-toast"
+import UserScreen from '../User/User.Screen'
+import FollowerScreen from '../Follower/Follower.Screen'
+import {NavigationContainer} from '@react-navigation/native'
+import {createStackNavigator} from '@react-navigation/stack'
+
+const Stack = createStackNavigator()
 
 class RootContainerScreen extends Component {
+
     constructor(props) {
         super(props)
         this.state = {
@@ -38,7 +44,20 @@ class RootContainerScreen extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <AppContainer/>
+                <NavigationContainer>
+                    <Stack.Navigator initialRouteName="UserScreen">
+                        <Stack.Screen
+                            name="UserScreen"
+                            component={UserScreen}
+                            options={{title: 'User'}}
+                        />
+                        <Stack.Screen
+                            name="FollowerScreen"
+                            component={FollowerScreen}
+                            options={{title: 'Follower'}}
+                        />
+                    </Stack.Navigator>
+                </NavigationContainer>
             </View>
         )
     }

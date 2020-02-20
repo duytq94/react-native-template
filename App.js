@@ -1,18 +1,19 @@
 import React, {Component} from 'react'
 import createSagaMiddleware from 'redux-saga'
-import storage from 'redux-persist/lib/storage'
-import {applyMiddleware, createStore} from "redux";
+import AsyncStorage from '@react-native-community/async-storage'
+import {applyMiddleware, createStore} from "redux"
 import {persistReducer, persistStore} from 'redux-persist'
-import {Provider} from "react-redux";
+import {Provider} from "react-redux"
 import {PersistGate} from 'redux-persist/integration/react'
-import rootReducer from "./src/reducers";
-import rootSaga from "./src/sagas";
-import RootContainer from "./src/Root/RootContainer.Screen";
+import rootReducer from "./src/reducers"
+import rootSaga from "./src/sagas"
+import RootContainer from "./src/Root/RootContainer.Screen"
+import 'react-native-gesture-handler'
 
 const sagaMiddleware = createSagaMiddleware()
 const persistConfig = {
     key: 'root',
-    storage,
+    storage: AsyncStorage,
     whitelist: []
 }
 
@@ -30,6 +31,6 @@ export default class App extends Component {
                     <RootContainer/>
                 </PersistGate>
             </Provider>
-        );
+        )
     }
 }
