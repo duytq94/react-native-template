@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import styles from './RootContainer.Style'
-import {View} from 'react-native'
+import {Keyboard, Platform, View} from 'react-native'
 import {clearNetworkFail} from "../actions"
 import Toast from "react-native-simple-toast"
 import {NavigationContainer} from '@react-navigation/native'
@@ -17,8 +17,26 @@ class RootContainerScreen extends Component {
     constructor(props) {
         super(props)
         this.state = {
+            isKeyboardShow: false,
+            keyboardHeight: 0,
             isShowNetworkErr: false
         }
+    }
+
+    componentDidMount() {
+        this.keyboardDidShowListener = Keyboard.addListener(
+            'keyboardDidShow',
+            this.keyboardDidShow
+        )
+        this.keyboardDidHideListener = Keyboard.addListener(
+            'keyboardDidHide',
+            this.keyboardDidHide
+        )
+    }
+
+    componentWillUnmount() {
+        this.keyboardDidShowListener.remove()
+        this.keyboardDidHideListener.remove()
     }
 
     static getDerivedStateFromProps(nextProps, prevState) {
@@ -40,6 +58,17 @@ class RootContainerScreen extends Component {
             nextProps.onCallApi(clearNetworkFail())
         }
         return null
+    }
+
+    keyboardDidShow = (e) => {
+        this.setState({
+            isKeyboardShow: true,
+            keyboardHeight: e.endCoordinates.height,
+        })
+    }
+
+    keyboardDidHide = () => {
+        this.setState({isKeyboardShow: false})
     }
 
     render() {
@@ -66,6 +95,9 @@ class RootContainerScreen extends Component {
                         />
                     </Stack.Navigator>
                 </NavigationContainer>
+                {this.state.isKeyboardShow && Platform.OS === 'ios' ?
+                    <View style={{height: this.state.keyboardHeight}}/> :
+                    null}
             </View>
         )
     }
