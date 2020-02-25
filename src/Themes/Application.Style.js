@@ -1,8 +1,8 @@
 import colors from './Colors'
-import {Dimensions, Platform} from 'react-native'
+import {Dimensions, Platform, StyleSheet} from 'react-native'
 import {fontFamily, fontSize} from '../const'
 
-const ApplicationStyle = {
+const ApplicationStyle = StyleSheet.create({
     mainContainer: {
         flex: 1,
         backgroundColor: colors.bgRoot,
@@ -21,7 +21,7 @@ const ApplicationStyle = {
         alignItems: 'center',
     },
     titleToolbar: {
-        color: 'white',
+        color: colors.white,
         fontFamily: fontFamily.bold,
         fontSize: fontSize.large,
     },
@@ -33,7 +33,7 @@ const ApplicationStyle = {
     icLeft: {
         width: 23,
         height: 23,
-        tintColor: 'white',
+        tintColor: colors.white,
     },
     viewWrapIcRight: {
         flex: 1,
@@ -43,10 +43,10 @@ const ApplicationStyle = {
     icRight: {
         width: 23,
         height: 23,
-        tintColor: 'white',
+        tintColor: colors.white,
     },
     textRight: {
-        color: 'white',
+        color: colors.white,
         fontFamily: fontFamily.medium,
         fontSize: fontSize.medium,
     },
@@ -55,7 +55,7 @@ const ApplicationStyle = {
         height: 0.5,
         alignSelf: 'stretch',
     },
-}
+})
 
 export default ApplicationStyle
 

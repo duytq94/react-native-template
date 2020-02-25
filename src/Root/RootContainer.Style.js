@@ -1,5 +1,6 @@
 import {StyleSheet} from 'react-native'
 import ApplicationStyle from "../Themes/Application.Style"
+import colors from "../Themes/Colors"
 
 export default StyleSheet.create({
     ...ApplicationStyle,
@@ -16,13 +17,13 @@ export default StyleSheet.create({
     btnRetry: {
         width: 150,
         height: 40,
-        backgroundColor: 'white',
+        backgroundColor: colors.white,
         borderRadius: 4,
         alignItems: 'center',
         justifyContent: 'center'
     },
     textRetry: {
-        color: 'black',
+        color: colors.black,
         fontWeight: 'bold'
     }
 })
