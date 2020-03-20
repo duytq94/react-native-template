@@ -16,6 +16,11 @@ public class MainActivity extends ReactActivity {
         return "RNTemplate";
     }
 
+    /**
+     * If not, navigation.goBack() not working.
+     * Although react-navigation docs not mention (at v5.x they remove the mention).
+     * And about docs rn gesture handler, they just tell that should config when if you use one of the native navigation libraries.
+     */
     @Override
     protected ReactActivityDelegate createReactActivityDelegate() {
         return new ReactActivityDelegate(this, getMainComponentName()) {
