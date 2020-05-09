@@ -18,7 +18,7 @@
     "apisauce": "^1.1.1",
     "lodash": "^4.17.15",
     "react": "16.11.0",
-    "react-native": "0.62.0",
+    "react-native": "0.62.2",
     "react-native-gesture-handler": "^1.6.0",
     "react-native-reanimated": "^1.7.0",
     "react-native-safe-area-context": "^0.7.3",
