@@ -28,7 +28,7 @@ class ProfileScreen extends Component {
   }
 
   getUserProfile = () => {
-    this.props.onCallApi(getProfileRequest('duytq94'));
+    this.props.callApi(getProfileRequest('duytq94'));
   };
 
   goDetail = () => {
@@ -115,19 +115,16 @@ class ProfileScreen extends Component {
   };
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     getProfile: state.getProfile,
   };
 };
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch) => {
   return {
-    onCallApi: object => dispatch(object),
+    callApi: (object) => dispatch(object),
   };
 };
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(ProfileScreen);
+export default connect(mapStateToProps, mapDispatchToProps)(ProfileScreen);

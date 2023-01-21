@@ -29,7 +29,7 @@ class FollowerScreen extends Component {
   }
 
   getFollower = () => {
-    this.props.onCallApi(getFollowerRequest('duytq94'));
+    this.props.callApi(getFollowerRequest('duytq94'));
   };
 
   goDetail = () => {
@@ -123,19 +123,16 @@ class FollowerScreen extends Component {
   };
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     getFollower: state.getFollower,
   };
 };
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch) => {
   return {
-    onCallApi: object => dispatch(object),
+    callApi: (object) => dispatch(object),
   };
 };
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(FollowerScreen);
+export default connect(mapStateToProps, mapDispatchToProps)(FollowerScreen);
