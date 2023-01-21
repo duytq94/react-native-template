@@ -4,7 +4,7 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import {fontFamily, fontSize} from '../const';
 import colors from '../Themes/Colors';
 
-const NoDataView = props => {
+const NoDataView = (props) => {
   return (
     <View style={styles.viewNoData}>
       <MaterialCommunityIcons
